@@ -41,7 +41,7 @@ export default function ChatInput({
   return (
     <Box flexShrink={0} px={{ xs: 0.5, md: 3 }} pb={{ xs: 1, md: 3 }}>
       <Box component={"form"} onSubmit={handleSubmit}>
-        <Stack direction={row} spacing={{ xs: 0.5, md: 2 }}>
+        <Stack direction={"row"} spacing={{ xs: 0.5, md: 2 }}>
           <TextField
             placeholder="message your Bot AI"
             sx={{
@@ -78,7 +78,7 @@ export default function ChatInput({
           <Button
             variant="outlined"
             onClick={handleSave}
-            disabled={!chat.length > 0}
+            disabled={!(chat && chat.length > 0)}  //check if chat exists and has items
             sx={{
               fontSize: { xs: 12, md: 16 },
               "@media (max-width:767px)": {
@@ -96,7 +96,7 @@ export default function ChatInput({
       <Snackbar
         open={showSnackbar}
         message={"Chat Saved!"}
-        onClose={() => setShowSnackBar("false")}
+        onClose={() => setShowSnackBar(false)}
         autoHideDuration={5000}
         action={
           <Link to="/history">
