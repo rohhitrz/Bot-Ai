@@ -1,5 +1,4 @@
-import ChatFilter from './components/ChatFilter';
-
+import ChatFilter from "./components/ChatFilter/ChatFilter";
 function App() {
 
 
