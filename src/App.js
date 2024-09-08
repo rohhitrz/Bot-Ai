@@ -1,5 +1,6 @@
 import ChatFilter from "./components/ChatFilter/ChatFilter";
 import ChatInput from "./components/ChatInput/ChatInput";
+import FeedbackModal from "./components/FeedbackModal/FeedbackModal";
 function App() {
 
 
@@ -7,6 +8,7 @@ function App() {
     <div className="App">
     <h1>React app</h1>
     <ChatInput/>
+   
 
 
      

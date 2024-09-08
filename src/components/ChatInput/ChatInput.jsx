@@ -8,7 +8,7 @@ export default function ChatInput({
   chat,
   clearChat,
 }) {
-  const [input, setInput] = useState("");
+  const [input, setInput] = useState("Please Ask Your Question");
   const inputRef = useRef(null);
   const [showSnackbar, setShowSnackBar] = useState(false);
 
